@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion des Stagiaires</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button onclick="window.location.href='index.html'">Retour à l'accueil</button>
+    <h1>Gestion des Stagiaires</h1>
+
+    <fieldset>
+        <legend>Formulaire Stagiaire</legend>
+        <input type="text" id="nom" placeholder="Nom">
+        <input type="text" id="prenom" placeholder="Prénom">
+        <input type="number" id="age" placeholder="Âge">
+        <input type="number" id="numInscript" placeholder="N° Inscription">
+        <input type="text" id="filiere" placeholder="Filière">
+        <input type="text" id="groupe" placeholder="Groupe">
+        <hr>
+        <button id="btnAjouter">Ajouter</button>
+        <button id="btnModifier">Modifier</button>
+        <button id="btnSupprimer">Supprimer</button>
+        <button id="btnSaveJson">JSON</button>
+    </fieldset>
+
+    <br>
+
+    <table border="1" width="100%">
+        <thead>
+            <tr bgcolor="#f2f2f2">
+                <th width="10%">N° Inscript</th>
+                <th width="20%">Nom</th>
+                <th width="20%">Prénom</th>
+                <th width="10%">Âge</th>
+                <th width="20%">Filière</th>
+                <th width="20%">Groupe</th>
+            </tr>
+        </thead>
+        <tbody id="corpsTableau" align="center">
+        </tbody>
+    </table>
+
+    <script src="models/personne.js"></script>
+    <script src="models/stagiaire.js"></script>
+    <script src="controllers/StagiairesController.js"></script>
+</body>
+</html>

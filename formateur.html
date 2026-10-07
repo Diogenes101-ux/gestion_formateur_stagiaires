@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion des Formateurs</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button onclick="window.location.href='index.html'">Retour à l'accueil</button>
+    <h1>Gestion des Formateurs</h1>
+
+    <fieldset>
+        <legend>Formulaire Formateur</legend>
+        <input type="text" id="nom" placeholder="Nom">
+        <input type="text" id="prenom" placeholder="Prénom">
+        <input type="number" id="age" placeholder="Âge">
+        <input type="number" id="matricule" placeholder="Matricule">
+        <input type="text" id="specialite" placeholder="Spécialité">
+        <input type="email" id="email" placeholder="Email">
+        <hr>
+        <button id="btnAjouter">Ajouter</button>
+        <button id="btnModifier">Modifier</button>
+        <button id="btnSupprimer">Supprimer</button>
+        <button id="btnSaveJson">JSON</button>
+    </fieldset>
+
+    <br>
+
+    <table border="1" width="100%">
+        <thead>
+            <tr bgcolor="#f2f2f2">
+                <th width="10%">Matricule</th>
+                <th width="15%">Nom</th>
+                <th width="15%">Prénom</th>
+                <th width="10%">Âge</th>
+                <th width="25%">Spécialité</th>
+                <th width="25%">Email</th>
+            </tr>
+        </thead>
+        <tbody id="corpsTableauFormateur" align="center">
+        </tbody>
+    </table>
+
+    <script src="models/personne.js"></script>
+    <script src="models/formateur.js"></script>
+    <script src="controllers/FormateursController.js"></script>
+</body>
+</html>
